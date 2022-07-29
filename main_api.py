@@ -16,29 +16,23 @@ def home():
 def api_return(task_id):
     task = tasks[task_id]
     print(task)
-    if(10 < task['dimensao']['altura'] < 200) and (6 < task['dimensao']['largura'] < 140):
+    if(10 < task['dimensao']['altura'] < 200) and (6 < task['dimensao']['largura'] < 140) and (task['peso'] > 0):
         entrega_ninja = {
             "nome": "Entrega Ninja",
             "valor_frete": (task['peso'] * 0.3) / 10,
             "prazo_dias": 6
         }
     else:
-        entrega_ninja = {
-            "nome": "Entrega Ninja",
-            "status": "Dimensões insuficientes"
-            }
+        entrega_ninja = {}
 
-    if(5 < task['dimensao']['altura'] < 140) and (13 < task['dimensao']['largura'] < 125):
+    if(5 < task['dimensao']['altura'] < 140) and (13 < task['dimensao']['largura'] < 125) and (task['peso'] > 0):
         entrega_kabum = {
             "nome": "Entrega KaBuM",
             "valor_frete": (task['peso'] * 0.2) / 10,
             "prazo_dias": 4
         }
     else:
-        entrega_kabum = {
-            "nome": "Entrega KaBuM",
-            "status": "Dimensões insuficientes"
-            }
+        entrega_kabum = {}
 
     return jsonify([entrega_ninja, entrega_kabum])
 
