@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, make_response
-from validation import valida_frete, valida_retorno
+from src.validation import valida_frete, valida_retorno
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
@@ -13,7 +13,7 @@ def home():
 def api_return(task_id):
     entrega_ninja, entrega_kabum = valida_frete(tasks[task_id])
     response = valida_retorno(entrega_ninja, entrega_kabum)
-    
+
     return jsonify(response)
 
 @app.route('/api/task', methods=['POST'])
