@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, make_response
-from src.validation import valida_frete, valida_retorno
+from validation import valida_frete, valida_retorno
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
