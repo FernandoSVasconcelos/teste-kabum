@@ -9,6 +9,7 @@ tasks = []
 def home():
     return 'The API is running...'
 
+# Define o método da requisição GET da API.
 @app.route('/api/task/<int:task_id>', methods = ['GET'])
 def api_return(task_id):
     entrega_ninja, entrega_kabum = valida_frete(tasks[task_id])
@@ -16,6 +17,7 @@ def api_return(task_id):
 
     return jsonify(response)
 
+# Define o método da requisição POST da API.
 @app.route('/api/task', methods=['POST'])
 def create_task():
     if not request.json or not 'peso' in request.json:
@@ -30,6 +32,7 @@ def create_task():
     tasks.append(task)
     return jsonify({'task': task}), 201
 
+# Função que lida com erros.
 @app.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)

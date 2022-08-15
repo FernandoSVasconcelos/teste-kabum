@@ -1,3 +1,6 @@
+# Funções de validação.
+
+# Valida se as dimensões do produto se encaixam nos padrões de cada tipo de frete.
 def valida_frete(task):
     if(10 < task['dimensao']['altura'] < 200) and (6 < task['dimensao']['largura'] < 140) and (task['peso'] > 0):
         entrega_ninja = {
@@ -18,6 +21,7 @@ def valida_frete(task):
         entrega_kabum = None
     return entrega_ninja, entrega_kabum
 
+# Valida o conteúdo do Json que será retornado pela API.
 def valida_retorno(entrega_ninja, entrega_kabum):
     if(entrega_kabum is not None) and (entrega_ninja is not None):
         return [entrega_ninja, entrega_kabum]
