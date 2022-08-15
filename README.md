@@ -1,12 +1,13 @@
 # KaBuM! Back-end Challenge
  
- A REST API designed to retrieve the available shipping options according to the input sent inside the request body. Built using [Python 3.10](https://www.python.org/downloads/) with [Flask Micro Framework](https://flask.palletsprojects.com/en/2.2.x/) using an Object Oriented approach and unit tests implemented using [JUnit 5.4.2](https://junit.org/junit5/).
+ A REST API designed to retrieve the available shipping options according to the input sent inside the request body. Built using [Python 3.10](https://www.python.org/downloads/) with [Flask Micro Framework](https://flask.palletsprojects.com/en/2.2.x/).
 
 ## Getting Started
 
 ### Follow the instructions to get a copy of the project up and running using [Visual Studio Code IDE](https://code.visualstudio.com/).
 
 - Clone or download the repo.
+- Open the terminal/cmd and type pip install -r requirements.txt.
 - Open the project in Visual Studio Code IDE.
 - Go to teste-kabum/src/.
 - Then run main_api.py.
