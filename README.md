@@ -93,12 +93,3 @@
 ```json
 []
 ```
-
----
-
-### If you want to run the unit tests
-- .
-- .
-- .
-- .
-- .
