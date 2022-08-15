@@ -17,6 +17,11 @@
 - With the project running, run: python make_request.py. To send an POST request to `http://127.0.0.1:5000/api/task`.
 - Use the body of the Json in make_request.py to inform the input data in JSON format.
 
+### To access the responses of the requests
+
+- Go to `http://127.0.0.1:5000/api/task/<request_numer>`.
+- For example: `http://127.0.0.1:5000/api/task/0`
+
 ### Test cases
 
 #### input
